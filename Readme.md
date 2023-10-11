@@ -13,7 +13,7 @@ git clone https://github.com/LYAKAKOY/SuperQuiz.git
 ```bash
 cd SuperQuiz 
 ```
-3. Собрать и запустить docker-compose.yaml
+3. Собрать образы и запустить контейнеры 
 ```bash
 docker compose -f docker-compose.yaml up -d 
 ```
@@ -21,6 +21,12 @@ docker compose -f docker-compose.yaml up -d
 ```bash
 docker-compose run --rm backend sh -c 'alembic upgrade heads'
 ```
+
+5. Остановить все контейнеры
+```bash
+docker compose -f docker-compose.yaml down --remove-orphans
+```
+
 ## Documentation
 После запуска будет доступна
 [Documentation](http://localhost:8000/docs) по адресу http://localhost:8000/docs
