@@ -22,7 +22,8 @@ docker compose -f docker-compose.yaml up -d
 docker-compose run --rm backend sh -c 'alembic upgrade heads'
 ```
 
-5. Остановить все контейнеры
+## Как остановить проект
+Чтобы остановить все контейнеры
 ```bash
 docker compose -f docker-compose.yaml down --remove-orphans
 ```
