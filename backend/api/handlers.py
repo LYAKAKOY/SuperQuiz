@@ -13,7 +13,7 @@ logger = getLogger(__name__)
 quiz_router = APIRouter()
 
 
-@quiz_router.post("/", response_model=ShowQuestion)
+@quiz_router.post("/", response_model=ShowQuestion | None)
 async def create_user(questions_num: int, db: AsyncSession = Depends(get_db)) -> ShowQuestion | None:
     try:
         last_question = await _get_last_question(db)

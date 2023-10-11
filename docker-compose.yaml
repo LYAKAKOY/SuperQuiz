@@ -7,6 +7,8 @@ services:
       - ./backend:/backend
     env_file:
       - .env
+    environment:
+      DATABASE: database
     networks:
       - web_app_network
     ports:
