@@ -17,7 +17,7 @@ cd SuperQuiz
 ```bash
 docker compose -f docker-compose.yaml up -d 
 ```
-4. Сделать миграции внутри контейнера backend с помощью alembic
+4. Совершить миграции внутри контейнера backend с помощью alembic
 ```bash
 docker-compose run --rm backend sh -c 'alembic upgrade heads'
 ```
