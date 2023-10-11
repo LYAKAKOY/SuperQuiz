@@ -15,6 +15,8 @@ quiz_router = APIRouter()
 
 @quiz_router.post("/", response_model=ShowQuestion | None)
 async def create_user(questions_num: int, db: AsyncSession = Depends(get_db)) -> ShowQuestion | None:
+    if questions_num < 0:
+        raise HTTPException(status_code=400, detail=f"question_number must be greater than or equal to 0")
     try:
         last_question = await _get_last_question(db)
         await _create_new_questions(questions_num, db)
