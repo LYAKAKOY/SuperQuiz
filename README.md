@@ -2,7 +2,7 @@
 Api для викторины
 
 ## Стек программы
-FastApi, PostgresSql
+FastApi, PostgreSql
 
 ## Как запустить проект
 1. Требуется сделать git clone проекта
